@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Imports Assets Files
+import 'font-awesome/css/font-awesome.min.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Imports layout files
+import Header from './components/layouts/Header';
+import Footer from './components/layouts/Footer';
+import SideBar from './components/layouts/SideBar';
+
+// Imports content files
+import Content from './components/content/Content';
+
+
+// Renders React JS main page
+ReactDOM.render(
+    <div>
+        <Header />
+        <SideBar />
+            <div class="content-wrapper">
+                <Content />
+            </div>
+        <Footer />
+    </div>
+    , document.getElementById('root'));
