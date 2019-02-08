@@ -44,9 +44,9 @@ export default class SideBar extends React.Component {
                         </a>
                         <ul class="treeview-menu">
                             <li><Link to="/overview"><i class="fa fa-circle-o"></i> Overview</Link></li>
-                            <li><Link to="/allcontacts"><i class="fa fa-circle-o"></i> All Contacts</Link></li>
-                            <li><Link to="/myguide"><i class="fa fa-circle-o"></i> My Guide</Link></li>
-                            <li><Link to="../charts/inline.html"><i class="fa fa-circle-o"></i> Follow-Ups</Link></li>
+                            <li><Link to="/all-contacts"><i class="fa fa-circle-o"></i> All Contacts</Link></li>
+                            <li><Link to="/my-guide"><i class="fa fa-circle-o"></i> My Guide</Link></li>
+                            <li><Link to="/follow-up"><i class="fa fa-circle-o"></i> Follow-Ups</Link></li>
                         </ul>
                     </li>
                     <li class="treeview">
