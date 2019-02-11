@@ -15,15 +15,15 @@ export default class SideBar extends React.Component {
     render() {
         return (
             <nav className="sidenav">
-                <ul>
+                <div>
                     {_routes.map((route, idx) => {
                         return route.view ? (
-                            <li>
-                                <Link to={route.path}>{route.name}</Link>
-                            </li>
+                            <a class="active">
+                                <Link to={route.path}><i className="fa fa-desktop"></i>{route.name} </Link>
+                            </a>
                         ) : (null);
                     })}
-                </ul>
+                </div>
             </nav>
         )
     }
