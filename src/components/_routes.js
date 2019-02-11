@@ -18,8 +18,13 @@ import React from 'react';
  *  `import()` must be called inside React.lazy() function containing the path to the Component that is to be imported.
  */
 
-// Initializing page Routes
+const Overview = React.lazy(() => import('./content/pages/Overview'));
+const Contact = React.lazy(() => import('./content/pages/Contact'));
+const MyGuide = React.lazy(() => import('./content/pages/MyGuide'));
+const FollowUp = React.lazy(() => import('./content/pages/FollowUp'));
+const Profile = React.lazy(() => import('./content/pages/Profile'));
 
+// Initializing page Routes
 /**
  * @see https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
  * const _routes = [
@@ -40,3 +45,14 @@ import React from 'react';
  *
  * `export default` is commonly used to expose Components for them to be imported to other Components across the app.
  */
+
+const _routes = [
+    { path: '/overview', name: 'Overview', view: Overview },
+    { path: '/contacts', name: 'Contacts', view: Contact },
+    { path: '/my-guide', name: 'My Guide', view: MyGuide },
+    { path: '/follow-up', name: 'Follow Up', view: FollowUp },
+    { path: '/profile', name: 'Profile', view: Profile },
+];
+
+export default _routes;
+
