@@ -27,6 +27,7 @@ export default class Content extends React.Component {
                     )} />
                 ) : (null);
             })}
+            <Redirect from="/" to="overview" />
         </div>
     }
 }

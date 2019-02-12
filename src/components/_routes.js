@@ -48,12 +48,62 @@ const Dashboard = React.lazy(() => import('./content/pages/Dashboard'));
  */ 
 
 const _routes = [
-    { path: '/overview', name: 'Overview', view: Overview},
-    { path: '/contacts', name: 'Contacts', view: Contact },
-    { path: '/my-guide', name: 'My Guide', view: MyGuide },
-    { path: '/follow-up', name: 'Follow Up', view: FollowUp },
-    { path: '/profile', name: 'Profile', view: Profile },
-    { path: '/dashboard', name: 'Dashboard', view: Dashboard },
+    {
+        path: '/overview',
+        name: 'Overview',
+        icon: null,
+        view: Overview
+    },
+    {
+        path: '/contacts',
+        name: 'Contacts',
+        icon: null,
+        view: Contact,
+    },
+    {
+        path: '/my-guide',
+        name: 'My Guide',
+        icon: null,
+        view: MyGuide
+    },
+    {
+        path: '/follow-up',
+        name: 'Follow Up',
+        icon: null,
+        view: FollowUp
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        icon: null,
+        view: Profile
+    },
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        icon:  <i className="fa fa-desktop"></i>,
+        view: Dashboard
+    },
+    {
+        path: '',
+        name: 'Dropdown',
+        icon: <i className="fa fa-desktop"></i>,
+        view: null,
+        sublink: [
+            {
+                path: '/d1',
+                name: 'D1',
+                icon: null,
+                view: null
+            },
+            {
+                path: '/d2',
+                name: 'D2',
+                icon: null,
+                view: null
+            },
+        ]
+    }
 ];
 
 export default _routes;

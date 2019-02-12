@@ -1,5 +1,4 @@
 import React from 'react'
-import { Toggle, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 // import routes
@@ -15,15 +14,27 @@ export default class SideBar extends React.Component {
     render() {
         return (
             <nav className="sidenav">
-                <div>
-                    {_routes.map((route, idx) => {
+                <ul>
+                {_routes.map((route, idx) => {
+
+                    if (route.sublink) {
+                        return (<li class="active">
+                            <Link to={route.path}>{route.icon} {route.name} </Link>
+                            <ul>
+                                {route.sublink.map((subroute, idx) => {
+                                    return (<li>
+                                        <Link to={subroute.path}>{subroute.icon} {subroute.name} </Link>
+                                    </li>)
+                                })}
+                            </ul>
+                        </li>)
+                    } else {
                         return route.view ? (
-                            <a class="active">
-                                <Link to={route.path}><i className="fa fa-desktop"></i>{route.name} </Link>
-                            </a>
+                            <Link to={route.path}>{route.icon} {route.name} </Link>
                         ) : (null);
-                    })}
-                </div>
+                    }
+                })}
+                </ul>
             </nav>
         )
     }
